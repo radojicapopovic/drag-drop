@@ -1,4 +1,3 @@
-// src/components/DraggableUserList.tsx
 import React, { useState } from "react";
 import { DragArea } from "./DragArea";
 import { DragItem } from "./DragItem";
@@ -13,7 +12,9 @@ type UserProps = {
 const UserItem = ({ firstName, lastName, email }: UserProps) => {
   return (
     <li>
-      <span>{firstName} {lastName}</span>
+      <span>
+        {firstName} {lastName}
+      </span>
       <span>{email}</span>
     </li>
   );
@@ -27,7 +28,11 @@ export const DraggableUserList = () => {
       <DragArea items={exampleUsers} onChange={setExampleUsers}>
         {exampleUsers.map((user, i) => (
           <DragItem key={i} index={i}>
-            <UserItem firstName={user.firstName} lastName={user.lastName} email={user.email} />
+            <UserItem
+              firstName={user.firstName}
+              lastName={user.lastName}
+              email={user.email}
+            />
           </DragItem>
         ))}
       </DragArea>

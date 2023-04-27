@@ -1,4 +1,3 @@
-// src/components/DragArea.tsx
 import React, { useContext } from "react";
 import { DragContext } from "./DragContext";
 
@@ -8,10 +7,17 @@ type DragAreaProps = {
   onChange: (newItems: any[]) => void;
 };
 
-export const DragArea: React.FC<DragAreaProps> = ({ children, items, onChange }) => {
+export const DragArea: React.FC<DragAreaProps> = ({
+  children,
+  items,
+  onChange,
+}) => {
   const { draggedItem, setDraggedItem } = useContext(DragContext);
 
-  const handleDragOver = (e: React.DragEvent<HTMLDivElement>, index: number) => {
+  const handleDragOver = (
+    e: React.DragEvent<HTMLDivElement>,
+    index: number
+  ) => {
     e.preventDefault();
   };
 

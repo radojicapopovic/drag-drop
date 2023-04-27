@@ -1,4 +1,3 @@
-// src/components/DragItem.tsx
 import React, { useContext } from "react";
 import { DragContext } from "./DragContext";
 

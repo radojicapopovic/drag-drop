@@ -1,4 +1,3 @@
-// src/components/DragContext.tsx
 import React, { createContext, useState } from "react";
 
 type DragContextType = {
@@ -17,7 +16,9 @@ type DragContextProviderProps = {
   children: React.ReactNode;
 };
 
-export const DragContextProvider: React.FC<DragContextProviderProps> = ({ children }) => {
+export const DragContextProvider: React.FC<DragContextProviderProps> = ({
+  children,
+}) => {
   const [draggedItem, setDraggedItem] = useState<number | null>(null);
 
   return (
